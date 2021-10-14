@@ -1,23 +1,22 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux"; /* Import Kar*/
+import { useDispatch, useSelector } from "react-redux";
 
 import { selectMovie } from "../actions";
 
 const MovieList = () => {
-  /** Props kadh */
-  const movies = useSelector((state) => state.movies); /** He lines add kar */
-  const dispatch = useDispatch(); /** He lines add kar */
+  const movies = useSelector((state) => state.movies);
+  const dispatch = useDispatch();
   const renderList = () => {
     return movies.map((movie) => {
-      /** Props kadh */
       return (
         <Link
           to={`/movies/${movie.id}`}
           key={movie.id}
           onClick={() => {
-            dispatch(selectMovie(movie)); /** he line add kar */
+            dispatch(selectMovie(movie));
+            // dispatch(deleteMovie(movie));
           }}
         >
           <div className="image-card">
@@ -42,6 +41,4 @@ const MovieList = () => {
   );
 };
 
-/** mapStateToProps kadhun tak */
-
-export default MovieList; /** Aadhich export default kadh ani hey tak */
+export default MovieList;

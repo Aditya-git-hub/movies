@@ -11,6 +11,9 @@ const selectedMovieReducer = (selectedMovie = null, action) => {
   if (action.type === "SELECTED_MOVIE") {
     return action.payload;
   }
+  if (action.type === "DELETE_MOVIE") {
+    return action.payload;
+  }
   return selectedMovie;
 };
 

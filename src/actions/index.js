@@ -4,3 +4,10 @@ export const selectMovie = (movie) => {
     payload: movie,
   };
 };
+
+export const deleteMovie = (movie) => {
+  return {
+    type: "DELETE_MOVIE",
+    payload: "abcd",
+  };
+};

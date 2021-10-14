@@ -1,11 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux"; /** He line add kar */
+import { useSelector } from "react-redux";
 
 const MovieDetails = () => {
-  /** movies remove kar */
-  const movie = useSelector(
-    (state) => state.selectedMovie
-  ); /**He line add kar */
+  console.log("Movie Deleted");
+  const movie = useSelector((state) => state.selectedMovie);
   return (
     <>
       <div
@@ -40,6 +38,4 @@ const MovieDetails = () => {
   );
 };
 
-/** mapStateToProps kadhun tak */
-
-export default MovieDetails; /** Aadhich export default kadh ani hey tak */
+export default MovieDetails;
