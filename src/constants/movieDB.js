@@ -13,7 +13,7 @@ export const myObj = {
       backgroundImageURL: "/images/background1.jpg",
     },
     {
-      id: 2,
+      id: "the-conjuring",
       title: "The Conjuring",
       language: "English",
       genre: "Horror",
@@ -25,7 +25,7 @@ export const myObj = {
       backgroundImageURL: "/images/background2.jpg",
     },
     {
-      id: 3,
+      id: "zack-snyder-justice-league",
       title: "Zack Snyder's Justice league",
       language: "English",
       genre: "Action",
@@ -37,7 +37,7 @@ export const myObj = {
       backgroundImageURL: "/images/background3.jpeg",
     },
     {
-      id: 4,
+      id: "perfect-blue",
       title: "Perfect Blue",
       language: "Japanese",
       genre: "Psychological",

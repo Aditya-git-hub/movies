@@ -160,3 +160,23 @@
   font-weight: bold;
   margin: 15px 0;
 }
+.back {
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  float: left;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.delete {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  float: right;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}

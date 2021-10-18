@@ -1,9 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
+import { deleteMovie, selectList } from "../actions";
 
 const MovieDetails = () => {
-  console.log("Movie Deleted");
   const movie = useSelector((state) => state.selectedMovie);
+  const dispatch = useDispatch();
+  const history = useHistory();
   return (
     <>
       <div
@@ -31,6 +35,24 @@ const MovieDetails = () => {
           <div className="description">
             <h3 className="description-headding">About the movie</h3>
             <div className="description-content">{movie.about}</div>
+            <button
+              className="back"
+              onClick={() => {
+                history.goBack();
+              }}
+            >
+              Go Back
+            </button>
+            <button
+              className="delete"
+              onClick={() => {
+                dispatch(deleteMovie(`${movie.id}`));
+                history.goBack();
+              }}
+            >
+              Delete
+            </button>
+            <div className="clear"></div>
           </div>
         </div>
       </div>

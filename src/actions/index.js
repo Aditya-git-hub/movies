@@ -5,9 +5,16 @@ export const selectMovie = (movie) => {
   };
 };
 
-export const deleteMovie = (movie) => {
+export const deleteMovie = (index) => {
   return {
     type: "DELETE_MOVIE",
-    payload: "abcd",
+    payload: index,
+  };
+};
+
+export const selectList = (movies) => {
+  return {
+    type: "MOVIE_LIST",
+    payload: movies,
   };
 };
