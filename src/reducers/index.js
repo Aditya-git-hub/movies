@@ -3,17 +3,27 @@ import { myObj } from "../constants/movieDB";
 
 const { movies } = myObj;
 
-const selectedMovieReducer = (initialState = movies, action) => {
+const initialState = { movieList: movies, selectedmovie: {} };
+
+const selectedMovieReducer = (state = initialState, action) => {
   /** */
   switch (action.type) {
     case "MOVIE_LIST":
-      return initialState;
+      return state;
     case "SELECTED_MOVIE":
-      return action.payload;
+      return {
+        ...state,
+        selectedmovie: action.payload,
+      };
     case "DELETE_MOVIE":
-      return initialState.filter((movie) => movie.id !== action.payload);
+      return {
+        ...state,
+        movieList: state.movieList.filter(
+          (movie) => movie.id !== action.payload
+        ),
+      };
     default:
-      return initialState;
+      return state;
   }
 };
 

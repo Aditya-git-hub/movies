@@ -12,9 +12,8 @@ export const deleteMovie = (index) => {
   };
 };
 
-export const selectList = (movies) => {
+export const selectList = () => {
   return {
     type: "MOVIE_LIST",
-    payload: movies,
   };
 };

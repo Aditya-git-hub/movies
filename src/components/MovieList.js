@@ -9,7 +9,7 @@ const MovieList = () => {
   const movies = useSelector((state) => state.selectedMovie);
   const dispatch = useDispatch();
   const renderList = () => {
-    return movies.map((movie, index) => {
+    return movies.movieList.map((movie, index) => {
       return (
         <>
           <div className="image-card">
